@@ -92,8 +92,8 @@ namespace Backend.Controllers
             return boletados;;
         }
 
-        // PUT: api/Boletados/att/5
-        [HttpPut("{id}")]
+        // PUT: api/Boletados/update/5
+        [HttpPut]
         [Route("update/{id}")]
         public async Task<IActionResult> PutBoletados(long id, Boletados boletados)
         {
