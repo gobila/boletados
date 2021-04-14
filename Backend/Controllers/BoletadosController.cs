@@ -24,8 +24,7 @@ namespace Backend.Controllers
         }
         // GET: api/Boletados/login
         [HttpPost]
-        [Route("login")]
-        
+        [Route("login")]    
         public async Task<ActionResult<dynamic>> Authenticate([FromBody]User model)
         {
             var userExists = new UserRepository().GetByUsername(model.Username);
@@ -46,10 +45,10 @@ namespace Backend.Controllers
                 Usuario = userExists
             });
         }
-        // GET: api/Boletados/users
+        
+        // GET: api/Boletados/user
         [HttpGet]
-        [Route("users")]
-        [Authorize]
+        [Route("user")]
         public IActionResult GetUsers()
         {
             return Ok("Olá " + User.Identity.Name + " rota aberta a todos os colaboradores.");
@@ -65,7 +64,6 @@ namespace Backend.Controllers
         // GET: api/Boletados/5
         [HttpGet]
         [Route("{id}")]
-        [Authorize]
         public async Task<ActionResult<Boletados>> GetBoletados(long id)
         {
             var boletados = await _context.Boletados.FindAsync(id);
@@ -77,6 +75,7 @@ namespace Backend.Controllers
 
             return boletados;
         }
+        
         // GET: api/Boletados/UF/go
         [HttpGet]
         [Route("uf/{uf}")]
@@ -95,8 +94,7 @@ namespace Backend.Controllers
 
         // PUT: api/Boletados/att/5
         [HttpPut("{id}")]
-        [Route("att/{id}")]
-        [Authorize]
+        [Route("update/{id}")]
         public async Task<IActionResult> PutBoletados(long id, Boletados boletados)
         {
             if (id != boletados.Id)
@@ -137,11 +135,9 @@ namespace Backend.Controllers
             
         }
 
-        // DELETE: api/Boletados//delete/5
+        // DELETE: api/Boletados/delete/5
         [HttpDelete]
-        
         [Route("delete/{id}")]
-        [Authorize]
         public async Task<IActionResult> DeleteBoletados(long id)
         {
             var boletados = await _context.Boletados.FindAsync(id);

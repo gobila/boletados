@@ -8,6 +8,6 @@ namespace Backend.Models
         public string Name {get;set;}
         public string CPF {get; set;}
         public string UF {get; set;}
-        public DateTime Bithday {get; set;}
+        public string Bithday {get; set;}
     }
 }

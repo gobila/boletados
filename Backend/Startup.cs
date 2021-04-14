@@ -52,6 +52,9 @@ namespace Backend
             {
                 app.UseDeveloperExceptionPage();
             }
+            
+            app.UseDefaultFiles();
+            app.UseStaticFiles();
 
             app.UseHttpsRedirection();
 
