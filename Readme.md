@@ -6,16 +6,16 @@ A ideia principal é poder acessar uma rota que retorne as pessoas com seus atri
 Partindo disso é possível cadastrar cadastrar as contas dessas pessoas e retornar os seus boletos pagos e não pagos.
 
 ## Rotas da API
-| Função                | Rota                          | Cool  |
-|:----------------------|:-----------------------------:|------:|
-| Todos os dados        | api/Boletados                 | $1600 |
-| Dados idividuais      | api/Boletados/{id}            |   $12 |
-| buscar por UF         | api/Boletados/UF/{uf}         |    $1 |
-| Cadastro de dados     | api/Boletados/cadastro        |    $1 |
-| Atualizar Cadastro    | api/Boletados/update/{id}     |    $1 |
-| Deletar Cadastro      | api/Boletados/delete/{id}     |    $1 |
-| Autenticar usuarios   | api/Boletados/login           |    $1 |
-| Lista de ususarios    | api/Boletados/user            |    $1 |
+| Função                | Rota                          |
+|:----------------------|:-----------------------------:|
+| Todos os dados        | api/Boletados                 |
+| Dados idividuais      | api/Boletados/{id}            |
+| buscar por UF         | api/Boletados/UF/{uf}         |
+| Cadastro de dados     | api/Boletados/cadastro        |
+| Atualizar Cadastro    | api/Boletados/update/{id}     |
+| Deletar Cadastro      | api/Boletados/delete/{id}     |
+| Autenticar usuarios   | api/Boletados/login           |
+| Lista de ususarios    | api/Boletados/user            |
 
 
 ## Proximos passos
